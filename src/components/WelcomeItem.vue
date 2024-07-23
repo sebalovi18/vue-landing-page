@@ -1,13 +1,21 @@
 <template>
-  <div class="item">
+  <div
+    class="item"
+  >
     <i>
-      <slot name="icon"></slot>
+      <slot
+        name="icon"
+      />
     </i>
-    <div class="details">
+    <div
+      class="details"
+    >
       <h3>
-        <slot name="heading"></slot>
+        <slot
+          name="heading"
+        />
       </h3>
-      <slot></slot>
+      <slot />
     </div>
   </div>
 </template>
