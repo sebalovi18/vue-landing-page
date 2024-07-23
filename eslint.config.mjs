@@ -1,4 +1,3 @@
-import * as vueEslintParser from 'vue-eslint-parser'
 import path from "node:path";
 import pluginVue from 'eslint-plugin-vue'
 import { includeIgnoreFile } from "@eslint/compat"
@@ -14,14 +13,8 @@ export default [
   includeIgnoreFile(gitignorePath),
   ...pluginVue.configs['flat/recommended'],
   {
-    name: 'generic-config',
-    files: [
-      '**/*.js',
-      '**/*.vue',
-      '**/*.ts'
-    ],
+    name: 'generic-project-config',
     languageOptions: {
-      parser: vueEslintParser,
       ecmaVersion: 'latest',
       sourceType: 'module',
     },
