@@ -1,13 +1,13 @@
-import path from "node:path"
+import path from 'node:path'
 import pluginVue from 'eslint-plugin-vue'
 import stylistic from '@stylistic/eslint-plugin'
-import { includeIgnoreFile } from "@eslint/compat"
-import { fileURLToPath } from "node:url"
+import { includeIgnoreFile } from '@eslint/compat'
+import { fileURLToPath } from 'node:url'
 
 // The next is needed to ignore the same files as gitignore
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const gitignorePath = path.resolve(__dirname, ".gitignore")
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+const gitignorePath = path.resolve(__dirname, '.gitignore')
 
 export default [
   // This is needed to ignore the same files as gitignore
@@ -17,7 +17,7 @@ export default [
     name: 'generic-project-config',
     languageOptions: {
       ecmaVersion: 'latest',
-      sourceType: 'module',
+      sourceType: 'module'
     },
     plugins: {
       '@stylistic': stylistic
@@ -68,7 +68,9 @@ export default [
       '@stylistic/no-extra-semi': 'error',
       '@stylistic/quotes': ['error', 'single'],
       '@stylistic/max-len': ['error', {
-        code: 120
+        code: 120,
+        ignoreStrings: true,
+        ignoreTemplateLiterals: true
       }]
     }
   }
