@@ -8,7 +8,9 @@ export default [
   {
     name: 'generic-config',
     languageOptions: {
-      parser: vueEslintParser
+      parser: vueEslintParser,
+      ecmaVersion: 'latest',
+      sourceType: 'module',
     },
     rules: {
       'no-debugger': 'warn',
