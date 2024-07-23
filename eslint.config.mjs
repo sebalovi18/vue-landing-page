@@ -1,12 +1,25 @@
-import pluginVue from 'eslint-plugin-vue'
 import * as vueEslintParser from 'vue-eslint-parser'
+import path from "node:path";
+import pluginVue from 'eslint-plugin-vue'
+import { includeIgnoreFile } from "@eslint/compat"
+import { fileURLToPath } from "node:url"
+
+// The next is needed to ignore the same files as gitignore
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const gitignorePath = path.resolve(__dirname, ".gitignore")
+
 export default [
-  // add more generic rulesets here, such as:
-  // js.configs.recommended,
+  // This is needed to ignore the same files as gitignore
+  includeIgnoreFile(gitignorePath),
   ...pluginVue.configs['flat/recommended'],
-  // ...pluginVue.configs['flat/vue2-recommended'], // Use this if you are using Vue.js 2.x.
   {
     name: 'generic-config',
+    files: [
+      '**/*.js',
+      '**/*.vue',
+      '**/*.ts'
+    ],
     languageOptions: {
       parser: vueEslintParser,
       ecmaVersion: 'latest',
