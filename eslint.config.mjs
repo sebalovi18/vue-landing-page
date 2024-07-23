@@ -1,4 +1,4 @@
-import path from "node:path";
+import path from "node:path"
 import pluginVue from 'eslint-plugin-vue'
 import { includeIgnoreFile } from "@eslint/compat"
 import { fileURLToPath } from "node:url"
