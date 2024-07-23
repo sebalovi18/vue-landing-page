@@ -1,8 +1,8 @@
+import { fileURLToPath } from 'node:url'
+import { includeIgnoreFile } from '@eslint/compat'
 import path from 'node:path'
 import pluginVue from 'eslint-plugin-vue'
 import stylistic from '@stylistic/eslint-plugin'
-import { includeIgnoreFile } from '@eslint/compat'
-import { fileURLToPath } from 'node:url'
 
 // The next is needed to ignore the same files as gitignore
 const __filename = fileURLToPath(import.meta.url)
@@ -14,7 +14,6 @@ export default [
   includeIgnoreFile(gitignorePath),
   ...pluginVue.configs['flat/recommended'],
   {
-    name: 'generic-project-config',
     ignores: [
       'src/components/icons/**'
     ],
@@ -22,59 +21,66 @@ export default [
       ecmaVersion: 'latest',
       sourceType: 'module'
     },
+    name: 'generic-project-config',
     plugins: {
       '@stylistic': stylistic
     },
     rules: {
-      'no-debugger': 'warn',
-      'no-console': 'off',
-      'no-else-return': 'error',
-      'no-param-reassign': 'error',
-      'arrow-body-style': ['error', 'as-needed'],
-      'vue/max-attributes-per-line': ['error', {
-        singleline: {
-          max: 1
-        },
-        multiline: {
-          max: 1
-        }
-      }],
-      'vue/first-attribute-linebreak': ['error', {
-        singleline: 'below',
-        multiline: 'below'
-      }],
-      'vue/no-v-html': 'off',
-      'vue/multi-word-component-names': 'off',
-      'vue/require-default-prop': 'off',
-      'vue/v-on-event-hyphenation': ['error', 'always', {
-        autofix: true
-      }],
-      'vue/comma-dangle': ['error', 'never'],
+      '@stylistic/brace-style': 'off',
       '@stylistic/comma-dangle': ['error', 'never'],
       '@stylistic/comma-spacing': 'error',
+      '@stylistic/indent': ['error', 2],
       '@stylistic/key-spacing': ['error', {
-        beforeColon: false,
         afterColon: true,
+        beforeColon: false,
         mode: 'strict'
       }],
       '@stylistic/keyword-spacing': ['error', {
-        before: true,
-        after: true
+        after: true,
+        before: true
       }],
-      '@stylistic/space-before-function-paren': ['error', 'always'],
-      '@stylistic/brace-style': 'off',
-      '@stylistic/indent': ['error', 2],
-      '@stylistic/space-before-blocks': 'error',
-      '@stylistic/type-annotation-spacing': 'error',
-      '@stylistic/object-curly-spacing': ['error', 'always'],
-      '@stylistic/semi': ['error', 'never'],
-      '@stylistic/no-extra-semi': 'error',
-      '@stylistic/quotes': ['error', 'single'],
       '@stylistic/max-len': ['error', {
         code: 120,
         ignoreStrings: true,
         ignoreTemplateLiterals: true,
         ignoreUrls: true
+      }],
+      '@stylistic/no-extra-semi': 'error',
+      '@stylistic/object-curly-spacing': ['error', 'always'],
+      '@stylistic/quotes': ['error', 'single'],
+      '@stylistic/semi': ['error', 'never'],
+      '@stylistic/space-before-blocks': 'error',
+      '@stylistic/space-before-function-paren': ['error', 'always'],
+      '@stylistic/type-annotation-spacing': 'error',
+      'arrow-body-style': ['error', 'as-needed'],
+      'no-console': 'off',
+      'no-debugger': 'warn',
+      'no-duplicate-imports': 'error',
+      'no-else-return': 'error',
+      'no-param-reassign': 'error',
+      'sort-imports': 'warn',
+      'sort-keys': ['warn', 'asc', {
+        caseSensitive: false,
+        natural: true
+      }],
+      'vue/comma-dangle': ['error', 'never'],
+      'vue/first-attribute-linebreak': ['error', {
+        multiline: 'below',
+        singleline: 'below'
+      }],
+      'vue/max-attributes-per-line': ['error', {
+        multiline: {
+          max: 1
+        },
+        singleline: {
+          max: 1
+        }
+      }],
+      'vue/multi-word-component-names': 'off',
+      'vue/no-v-html': 'off',
+      'vue/require-default-prop': 'off',
+      'vue/v-on-event-hyphenation': ['error', 'always', {
+        autofix: true
       }]
     }
   }

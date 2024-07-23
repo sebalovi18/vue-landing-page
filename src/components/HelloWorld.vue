@@ -2,9 +2,10 @@
 import { defineProps, ref } from 'vue'
 
 const variableA = ref({
+  age: 20,
   id: 1,
-  name: 'test',
-  lastName: 'test'
+  lastName: 'test',
+  name: 'test'
 })
 </script>
 
