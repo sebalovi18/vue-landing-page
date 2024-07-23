@@ -1,9 +1,13 @@
-<script setup lang="ts">
+<script setup>
 import { defineProps } from 'vue'
 
-const props = defineProps<{
-  msg: string
-}>()
+const props = defineProps({
+  propA: String,
+  propB: {
+    type: String,
+    required: true
+  }
+})
 
 </script>
 
