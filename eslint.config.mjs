@@ -15,6 +15,9 @@ export default [
   ...pluginVue.configs['flat/recommended'],
   {
     name: 'generic-project-config',
+    ignores: [
+      'src/components/icons/**'
+    ],
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module'
@@ -70,7 +73,8 @@ export default [
       '@stylistic/max-len': ['error', {
         code: 120,
         ignoreStrings: true,
-        ignoreTemplateLiterals: true
+        ignoreTemplateLiterals: true,
+        ignoreUrls: true
       }]
     }
   }
