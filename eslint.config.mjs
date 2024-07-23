@@ -1,5 +1,6 @@
 import path from "node:path"
 import pluginVue from 'eslint-plugin-vue'
+import stylistic from '@stylistic/eslint-plugin'
 import { includeIgnoreFile } from "@eslint/compat"
 import { fileURLToPath } from "node:url"
 
@@ -17,6 +18,9 @@ export default [
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
+    },
+    plugins: {
+      '@stylistic': stylistic
     },
     rules: {
       'no-debugger': 'warn',
@@ -42,7 +46,30 @@ export default [
       'vue/v-on-event-hyphenation': ['error', 'always', {
         autofix: true
       }],
-      'vue/comma-dangle': ['error', 'never']
+      'vue/comma-dangle': ['error', 'never'],
+      '@stylistic/comma-dangle': ['error', 'never'],
+      '@stylistic/comma-spacing': 'error',
+      '@stylistic/key-spacing': ['error', {
+        beforeColon: false,
+        afterColon: true,
+        mode: 'strict'
+      }],
+      '@stylistic/keyword-spacing': ['error', {
+        before: true,
+        after: true
+      }],
+      '@stylistic/space-before-function-paren': ['error', 'always'],
+      '@stylistic/brace-style': 'off',
+      '@stylistic/indent': ['error', 2],
+      '@stylistic/space-before-blocks': 'error',
+      '@stylistic/type-annotation-spacing': 'error',
+      '@stylistic/object-curly-spacing': ['error', 'always'],
+      '@stylistic/semi': ['error', 'never'],
+      '@stylistic/no-extra-semi': 'error',
+      '@stylistic/quotes': ['error', 'single'],
+      '@stylistic/max-len': ['error', {
+        code: 120
+      }]
     }
   }
 ]

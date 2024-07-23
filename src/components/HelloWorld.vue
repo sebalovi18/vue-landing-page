@@ -1,14 +1,11 @@
-<script setup>
-import { defineProps } from 'vue'
+<script setup lang="ts">
+import { defineProps, ref } from 'vue'
 
-const props = defineProps({
-  propA: String,
-  propB: {
-    type: String,
-    required: true
-  }
+const variableA = ref({
+  id: 1,
+  name: 'test',
+  lastName: 'test'
 })
-
 </script>
 
 <template>
