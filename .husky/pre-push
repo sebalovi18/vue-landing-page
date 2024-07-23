@@ -1,0 +1,7 @@
+GREEN='\033[0;32m'
+NOCOLOR='\033[0m'
+
+echo "Running ${GREEN}npm run lint${NOCOLOR} command..."
+npm run lint
+echo "Running ${GREEN}npm run type-check${NOCOLOR} command..."
+npm run type-check
