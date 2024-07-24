@@ -6,7 +6,7 @@ import pluginVue from 'eslint-plugin-vue'
 import stylistic from '@stylistic/eslint-plugin'
 import tseslint from 'typescript-eslint'
 
-// The next is needed to ignore the same files as gitignore
+// The next is necessary to ignore the same files as gitignore
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 const gitignorePath = path.resolve(__dirname, '.gitignore')
@@ -22,10 +22,6 @@ export default tseslint.config(
     ignores: [
       'src/components/icons/**'
     ],
-    languageOptions: {
-      ecmaVersion: 'latest',
-      sourceType: 'module'
-    },
     name: 'generic-project-config',
     plugins: {
       '@stylistic': stylistic
@@ -82,6 +78,8 @@ export default tseslint.config(
         }
       }],
       'vue/multi-word-component-names': 'off',
+      'vue/no-undef-components': 'error',
+      'vue/no-undef-properties': 'error',
       'vue/no-v-html': 'off',
       'vue/require-default-prop': 'off',
       'vue/v-on-event-hyphenation': ['error', 'always', {
