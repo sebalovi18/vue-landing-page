@@ -1,4 +1,3 @@
-import eslint from '@eslint/js'
 import { fileURLToPath } from 'node:url'
 import { includeIgnoreFile } from '@eslint/compat'
 import path from 'node:path'
@@ -15,7 +14,6 @@ export default tseslint.config(
   {
     extends: [
       includeIgnoreFile(gitignorePath),
-      eslint.configs.recommended,
       ...tseslint.configs.recommended,
       ...pluginVue.configs['flat/recommended']
     ],
