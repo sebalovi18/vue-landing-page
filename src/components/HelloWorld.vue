@@ -1,14 +1,3 @@
-<script setup lang="ts">
-import { defineProps, ref } from 'vue'
-
-const variableA = ref({
-  age: 20,
-  id: 1,
-  lastName: 'test',
-  name: 'test'
-})
-</script>
-
 <template>
   <div
     class="greetings"
