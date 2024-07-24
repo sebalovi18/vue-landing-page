@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import CommunityIcon from './icons/IconCommunity.vue'
 import DocumentationIcon from './icons/IconDocumentation.vue'
 import EcosystemIcon from './icons/IconEcosystem.vue'
