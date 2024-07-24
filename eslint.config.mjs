@@ -1,19 +1,24 @@
+import eslint from '@eslint/js'
 import { fileURLToPath } from 'node:url'
 import { includeIgnoreFile } from '@eslint/compat'
 import path from 'node:path'
 import pluginVue from 'eslint-plugin-vue'
 import stylistic from '@stylistic/eslint-plugin'
+import tseslint from 'typescript-eslint'
 
 // The next is needed to ignore the same files as gitignore
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 const gitignorePath = path.resolve(__dirname, '.gitignore')
 
-export default [
-  // This is needed to ignore the same files as gitignore
-  includeIgnoreFile(gitignorePath),
-  ...pluginVue.configs['flat/recommended'],
+export default tseslint.config(
   {
+    extends: [
+      includeIgnoreFile(gitignorePath),
+      eslint.configs.recommended,
+      ...tseslint.configs.recommended,
+      ...pluginVue.configs['flat/recommended']
+    ],
     ignores: [
       'src/components/icons/**'
     ],
@@ -84,4 +89,4 @@ export default [
       }]
     }
   }
-]
+)
