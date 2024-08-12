@@ -1,21 +1,31 @@
 import { fileURLToPath } from 'node:url'
 import { includeIgnoreFile } from '@eslint/compat'
+import js from '@eslint/js'
 import path from 'node:path'
-import pluginVue from 'eslint-plugin-vue'
 import stylistic from '@stylistic/eslint-plugin'
-import tseslint from 'typescript-eslint'
+import ts from 'typescript-eslint'
+import vue from 'eslint-plugin-vue'
 
 // The next is necessary to ignore the same files as gitignore
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 const gitignorePath = path.resolve(__dirname, '.gitignore')
 
-export default tseslint.config(
+export default ts.config(
+  js.configs.recommended,
+  ...ts.configs.recommended,
+  ...vue.configs['flat/recommended'],
+  {
+    files: ['*.vue', '**/*.vue'],
+    languageOptions: {
+      parserOptions: {
+        parser: '@typescript-eslint/parser'
+      }
+    }
+  },
   {
     extends: [
-      includeIgnoreFile(gitignorePath),
-      ...tseslint.configs.recommended,
-      ...pluginVue.configs['flat/recommended']
+      includeIgnoreFile(gitignorePath)
     ],
     ignores: [
       'src/components/icons/**'
@@ -51,6 +61,7 @@ export default tseslint.config(
       '@stylistic/space-before-blocks': 'error',
       '@stylistic/space-before-function-paren': ['error', 'always'],
       '@stylistic/type-annotation-spacing': 'error',
+      '@typescript-eslint/no-unused-vars': 'off',
       'arrow-body-style': ['error', 'as-needed'],
       'no-console': 'off',
       'no-debugger': 'warn',
