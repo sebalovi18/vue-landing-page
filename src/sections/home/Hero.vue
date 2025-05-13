@@ -33,7 +33,9 @@ const { t } = useI18n()
           <li
             class="flex items-center gap-2"
           >
-            <CheckBadge />
+            <CheckBadge 
+              class="size-5 grow-0 shrink-0 stroke-white"
+            />
             <span>
               {{ t('hero.list.item1') }}
             </span>
@@ -41,7 +43,9 @@ const { t } = useI18n()
           <li
             class="flex items-center gap-2"
           >
-            <CheckBadge />
+            <CheckBadge 
+              class="size-5 grow-0 shrink-0 stroke-white"
+            />
             <span>
               {{ t('hero.list.item2') }}
             </span>
@@ -49,7 +53,9 @@ const { t } = useI18n()
           <li
             class="flex items-center gap-2"
           >
-            <CheckBadge />
+            <CheckBadge 
+              class="size-5 grow-0 shrink-0 stroke-white"
+            />
             <span>
               {{ t('hero.list.item3') }}
             </span>

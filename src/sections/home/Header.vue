@@ -15,7 +15,7 @@ const { t } = useI18n()
       class="flex items-center gap-2"
     >
       <AcademicCap 
-        class="size-5 stroke-white"
+        class="size-5 stroke-white grow-0 shrink-0"
       />
       <span
         class="text-white text-lg"
