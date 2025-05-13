@@ -6,7 +6,9 @@ import Pricing from '@/sections/home/Pricing.vue'
 </script>
 
 <template>
-  <div>
+  <div
+    class="w-full"
+  >
     <Header />
     <Hero />
     <Stats />

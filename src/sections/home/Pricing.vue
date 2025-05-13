@@ -143,27 +143,27 @@ const getPlanFeatures = (id: string): Array<{
 
 <template>
   <div
-    class="py-8"
+    class="px-4 py-8 space-y-4"
   >
     <div
-      class="flex gap-4 p-4 justify-center"
+      class="flex flex-wrap gap-4 justify-center"
     >
       <div
         v-for="plan in plans"
         :key="plan.id"
-        class="flex items-end flex-wrap"
+        class="w-[300px] flex items-end flex-wrap"
       >
         <div
           class="shadow-md w-[300px]"
         >
           <div
             v-if="plan.id === 'advanced_solo'"
-            class="text-lg font-light text-center text-white bg-blue-900 rounded-t-lg w-[300px] py-2"
+            class="w-full text-lg font-light text-center text-white bg-blue-900 rounded-t-lg py-2"
           >
             {{ t('pricing.popular') }}
           </div>
           <div
-            class="flex flex-col gap-4 py-4 px-8 border bg-white hover:bg-gray-50"
+            class="w-full flex flex-col gap-4 py-4 px-8 border bg-white hover:bg-gray-50"
             :class="plan.id === 'advanced_solo' ? 'border-blue-900 rounded-b-lg' : 'border-gray-200 rounded-lg'"
           >
             <!-- Pricing Name -->

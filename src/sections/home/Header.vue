@@ -9,7 +9,7 @@ const { t } = useI18n()
 
 <template>
   <div
-    class="flex items-center justify-between p-4 bg-blue-900"
+    class="sticky top-0 z-10 flex items-center justify-between p-4 bg-blue-900"
   >
     <div
       class="flex items-center gap-2"

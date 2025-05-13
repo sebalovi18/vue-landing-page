@@ -7,10 +7,10 @@ const { t } = useI18n()
 </script>
 <template>
   <div
-    class="bg-blue-900 text-white py-4 px-16 flex items-center justify-between"
+    class="bg-blue-900 text-white grid grid-cols-1 gap-4 lg:grid-cols-2 items-center"
   >
     <div
-      class="space-y-4"
+      class="space-y-4 px-4"
     >
       <!-- Hero title and description -->
       <div>
@@ -20,7 +20,7 @@ const { t } = useI18n()
           {{ t('hero.title') }}
         </h1>
         <p
-          class="text-lg w-lg font-thin"
+          class="text-lg w-auto md:w-lg font-thin"
         >
           {{ t('hero.description') }}
         </p>
@@ -78,10 +78,11 @@ const { t } = useI18n()
         </button>
       </div>
     </div>
-    <div>
+    <div
+      class="px-4"
+    >
       <iframe
-        width="1024"
-        height="576"
+        class="w-full h-[360px] lg:h-[576px]"
         src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=Qy1vqtm-OjM5chcM"
         title="YouTube video player"
         frameborder="0"

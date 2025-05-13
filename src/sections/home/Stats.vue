@@ -25,20 +25,20 @@ const stats = computed((): Array<{ title: string, description: string }> => [
 </script>
 <template>
   <div
-    class="flex items-center justify-evenly px-4 h-[200px] bg-blue-200"
+    class="grid grid-cols-2 md:grid-cols-4 gap-4 items-center justify-evenly px-4 h-[200px] bg-blue-200"
   >
     <div
       v-for="stat in stats"
       :key="stat.title"
-      class="flex flex-col items-center justify-center"
+      class="flex flex-col items-center text-center justify-center"
     >
       <h2
-        class="text-4xl font-bold text-blue-900"
+        class="text-lg text-center lg:text-xl xl:text-4xl font-bold text-blue-900"
       >
         {{ stat.title }}
       </h2>
       <p
-        class="text-sm text-blue-900"
+        class="text-[10px] lg:text-[11px] xl:text-sm text-blue-900"
       >
         {{ stat.description }}
       </p>
