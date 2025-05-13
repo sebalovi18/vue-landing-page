@@ -143,6 +143,7 @@ const getPlanFeatures = (id: string): Array<{
 
 <template>
   <div
+    id="pricing"
     class="px-4 py-8 space-y-4"
   >
     <div
@@ -151,7 +152,7 @@ const getPlanFeatures = (id: string): Array<{
       <div
         v-for="plan in plans"
         :key="plan.id"
-        class="w-[300px] flex items-end flex-wrap"
+        class="w-[300px] flex items-end"
       >
         <div
           class="shadow-md w-[300px]"

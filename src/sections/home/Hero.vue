@@ -4,6 +4,12 @@ import CheckBadge from '@/components/icons/CheckBadge.vue'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
+
+const scrollToPricing = () => {
+  const pricingSection = document.getElementById('pricing')
+  pricingSection?.scrollIntoView({ behavior: 'smooth' })
+}
+
 </script>
 <template>
   <div
@@ -73,6 +79,7 @@ const { t } = useI18n()
         </button>
         <button
           class="base-button text-white bg-blue-900 hover:bg-white hover:text-blue-900 text-xs"
+          @click="scrollToPricing"
         >
           {{ t('hero.button.view') }}
         </button>
