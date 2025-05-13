@@ -48,12 +48,12 @@ export default ts.config(
         after: true,
         before: true
       }],
-      '@stylistic/max-len': ['error', {
-        code: 120,
-        ignoreStrings: true,
-        ignoreTemplateLiterals: true,
-        ignoreUrls: true
-      }],
+      // '@stylistic/max-len': ['error', {
+      //   code: 120,
+      //   ignoreStrings: true,
+      //   ignoreTemplateLiterals: true,
+      //   ignoreUrls: true
+      // }],
       '@stylistic/no-extra-semi': 'error',
       '@stylistic/object-curly-spacing': ['error', 'always'],
       '@stylistic/quotes': ['error', 'single'],
@@ -68,11 +68,11 @@ export default ts.config(
       'no-duplicate-imports': 'error',
       'no-else-return': 'error',
       'no-param-reassign': 'error',
-      'sort-imports': 'warn',
-      'sort-keys': ['warn', 'asc', {
-        caseSensitive: false,
-        natural: true
-      }],
+      // 'sort-imports': 'warn',
+      // 'sort-keys': ['warn', 'asc', {
+      //   caseSensitive: false,
+      //   natural: true
+      // }],
       'vue/comma-dangle': ['error', 'never'],
       'vue/first-attribute-linebreak': ['error', {
         multiline: 'below',
