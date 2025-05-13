@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import CheckCircle from '@/components/icons/CheckCircle.vue'
 import CheckBadge from '@/components/icons/CheckBadge.vue'
 import { useI18n } from 'vue-i18n'
 
