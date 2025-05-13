@@ -4,7 +4,7 @@ import { useI18n } from 'vue-i18n'
 import { languages } from '@/constants/languages'
 import type { Language } from '@/types/Language'
 
-const { locale } = useI18n()
+const { locale, t } = useI18n()
 
 const selectedLanguage = computed((): Language => 
   languages.find((language) => language.code === locale.value) as Language
@@ -18,20 +18,19 @@ const isLanguageSelectorHovered = ref(false)
 </script>
 <template>
   <div
-    class="space-y-1"
     @mouseenter="isLanguageSelectorHovered = true"
     @mouseleave="isLanguageSelectorHovered = false"
   >
     <button
-      class="flex items-center gap-2 border border-green-600 rounded-md p-2 w-[100px] cursor-pointer grow-0 shrink-0 bg-green-50 hover:bg-green-100 text-gray-500"
+      class="relative flex items-center justify-center gap-2 border border-white text-white rounded-md p-2 w-[120px] cursor-pointer grow-0 shrink-0 bg-blue-900 hover:bg-blue-800"
     >
       <img
         :src="selectedLanguage.image"
-        :alt="selectedLanguage.label"
+        :alt="selectedLanguage.code"
         class="w-4 h-4 grow-0 shrink-0"
       >
       <span>
-        {{ selectedLanguage.label }}
+        {{ t('languages.' + selectedLanguage.code) }}
       </span>
     </button>
     <Transition
@@ -39,21 +38,21 @@ const isLanguageSelectorHovered = ref(false)
     >
       <div
         v-if="isLanguageSelectorHovered"
-        class="flex flex-col justify-center items-center gap-1"
+        class="mt-1 absolute flex flex-col justify-center items-center gap-1"
       >
         <button
           v-for="language in filteredLanguages"
           :key="language.id"
-          class="flex items-center gap-2 border rounded-md p-2 w-[100px] cursor-pointer grow-0 shrink-0 bg-white hover:bg-gray-100 text-gray-500 shadow-sm"
+          class="flex items-center justify-center gap-2 border rounded-md p-2 w-[120px] cursor-pointer grow-0 shrink-0 bg-white hover:bg-gray-100 text-gray-500 shadow-sm"
           @click="locale = language.code"
         >
           <img
             :src="language.image"
-            :alt="language.label"
+            :alt="language.code"
             class="w-4 h-4 grow-0 shrink-0"
           >
           <span>
-            {{ language.label }}
+            {{ t('languages.' + language.code) }}
           </span>
         </button>
       </div>

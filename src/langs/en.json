@@ -1,3 +1,6 @@
 {
-  "header.title": "Testing landing page"
+  "header.title": "Testing landing page",
+  "languages.en": "English",
+  "languages.es": "Spanish",
+  "languages.de": "German"
 }

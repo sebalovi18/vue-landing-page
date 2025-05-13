@@ -9,27 +9,20 @@ const { t } = useI18n()
 
 <template>
   <div
-    class="flex items-center justify-between"
+    class="flex items-center justify-between p-4 bg-blue-900"
   >
     <div
       class="flex items-center gap-2"
     >
       <AcademicCap 
-        class="size-5"
+        class="size-5 stroke-white"
       />
-      <span>
+      <span
+        class="text-white"
+      >
         {{ t('header.title') }}
       </span>
     </div>
-    <div
-      class="flex items-center gap-2"
-    >
-      <div>
-        Flag
-      </div>
-      <div>
-        <LanguageSelector />
-      </div>
-    </div>
+    <LanguageSelector />
   </div>
 </template>
