@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Bolt from '@/components/icons/Bolt.vue'
+import BoltIcon from '@/components/icons/BoltIcon.vue'
 import CheckCircle from '@/components/icons/CheckCircle.vue'
 import XCircle from '@/components/icons/XCircle.vue'
 import { type Component, computed } from 'vue'
@@ -29,7 +29,7 @@ const plans = computed((): Array<{
     features: [
       {
         description: t('pricing.1.uniqueFeatures.1.description'),
-        icon: Bolt,
+        icon: BoltIcon,
         iconColor: 'stroke-blue-900'
       },
       ...getPlanFeatures('essential')
@@ -44,7 +44,7 @@ const plans = computed((): Array<{
     features: [
       {
         description: t('pricing.2.uniqueFeatures.1.description'),
-        icon: Bolt,
+        icon: BoltIcon,
         iconColor: 'stroke-blue-900'
       },
       ...getPlanFeatures('advanced_solo')
@@ -59,7 +59,7 @@ const plans = computed((): Array<{
     features: [
       {
         description: t('pricing.3.uniqueFeatures.1.description'),
-        icon: Bolt,
+        icon: BoltIcon,
         iconColor: 'stroke-blue-900'
       },
       ...getPlanFeatures('advanced')
@@ -74,7 +74,7 @@ const plans = computed((): Array<{
     features: [
       {
         description: t('pricing.4.uniqueFeatures.1.description'),
-        icon: Bolt,
+        icon: BoltIcon,
         iconColor: 'stroke-blue-900'
       },
       ...getPlanFeatures('expert')
