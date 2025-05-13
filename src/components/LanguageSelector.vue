@@ -38,23 +38,27 @@ const isLanguageSelectorHovered = ref(false)
     >
       <div
         v-if="isLanguageSelectorHovered"
-        class="mt-1 absolute flex flex-col justify-center items-center gap-1"
+        class="absolute flex flex-col justify-center items-center"
       >
-        <button
+        <div
           v-for="language in filteredLanguages"
           :key="language.id"
-          class="flex items-center justify-center gap-2 border rounded-md p-2 w-[120px] cursor-pointer grow-0 shrink-0 bg-white hover:bg-gray-100 text-gray-500 shadow-sm"
-          @click="locale = language.code"
+          class="pt-1"
         >
-          <img
-            :src="language.image"
-            :alt="language.code"
-            class="w-4 h-4 grow-0 shrink-0"
+          <button
+            class="flex items-center justify-center gap-2 border rounded-md p-2 w-[120px] cursor-pointer grow-0 shrink-0 bg-white hover:bg-gray-100 text-gray-500 shadow-sm"
+            @click="locale = language.code"
           >
-          <span>
-            {{ t('languages.' + language.code) }}
-          </span>
-        </button>
+            <img
+              :src="language.image"
+              :alt="language.code"
+              class="w-4 h-4 grow-0 shrink-0"
+            >
+            <span>
+              {{ t('languages.' + language.code) }}
+            </span>
+          </button>
+        </div>
       </div>
     </Transition>
   </div>
