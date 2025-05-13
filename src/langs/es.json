@@ -9,5 +9,13 @@
   "hero.list.item2": "Desarrollo rápido",
   "hero.list.item3": "Precios accesibles",
   "hero.button.buy": "Comprar ahora",
-  "hero.button.view": "Ver planes"
+  "hero.button.view": "Ver planes",
+  "stats.1.title": "18M+",
+  "stats.1.description": "Sitios web creados con nuestras plantillas",
+  "stats.2.title": "4.9/5",
+  "stats.2.description": "Calificación de satisfacción del cliente",
+  "stats.3.title": "2000+",
+  "stats.3.description": "Plantillas creadas por nuestra comunidad",
+  "stats.4.title": "15 Sec.",
+  "stats.4.description": "Cada 15 segundos, se crea un nuevo sitio web"
 }

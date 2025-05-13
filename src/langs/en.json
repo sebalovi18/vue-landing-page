@@ -9,5 +9,13 @@
   "hero.list.item2": "Fast Development",
   "hero.list.item3": "Affordable Pricing",
   "hero.button.buy": "Buy Now",
-  "hero.button.view": "View Plans"
+  "hero.button.view": "View Plans",
+  "stats.1.title": "18M+",
+  "stats.1.description": "Websites created with our templates",
+  "stats.2.title": "4.9/5",
+  "stats.2.description": "Customer satisfaction rating",
+  "stats.3.title": "2000+",
+  "stats.3.description": "Templates created by our community",
+  "stats.4.title": "15 Sec.",
+  "stats.4.description": "Every 15 seconds, a new website is created"
 }
