@@ -22,7 +22,7 @@ const isLanguageSelectorHovered = ref(false)
     @mouseleave="isLanguageSelectorHovered = false"
   >
     <button
-      class="relative flex items-center justify-center gap-2 border border-white text-white rounded-md p-2 w-[120px] cursor-pointer grow-0 shrink-0 bg-blue-900 hover:bg-blue-800"
+      class="relative base-button border-white text-white bg-blue-900 hover:bg-blue-800"
     >
       <img
         :src="selectedLanguage.image"
@@ -46,7 +46,7 @@ const isLanguageSelectorHovered = ref(false)
           class="pt-1"
         >
           <button
-            class="flex items-center justify-center gap-2 border rounded-md p-2 w-[120px] cursor-pointer grow-0 shrink-0 bg-white hover:bg-gray-100 text-gray-500 shadow-sm"
+            class="base-button bg-white hover:bg-gray-100 text-gray-500"
             @click="locale = language.code"
           >
             <img

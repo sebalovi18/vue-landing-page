@@ -1,1 +1,5 @@
 @import 'tailwindcss';
+
+.base-button {
+  @apply flex items-center justify-center gap-2 border rounded-md p-2 w-[120px] cursor-pointer grow-0 shrink-0;
+}

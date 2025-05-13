@@ -2,5 +2,12 @@
   "header.title": "Testing landing page",
   "languages.en": "English",
   "languages.es": "Spanish",
-  "languages.de": "German"
+  "languages.de": "German",
+  "hero.title": "Build Your Dream Website Today",
+  "hero.description": "We offer a wide range of services to help you build your dream website. From design to development, we have you covered.",
+  "hero.list.item1": "Professional Design",
+  "hero.list.item2": "Fast Development",
+  "hero.list.item3": "Affordable Pricing",
+  "hero.button.buy": "Buy Now",
+  "hero.button.view": "View Plans"
 }

@@ -2,5 +2,12 @@
   "header.title": "Página de aterrizaje de prueba",
   "languages.en": "Inglés",
   "languages.es": "Español",
-  "languages.de": "Alemán"
+  "languages.de": "Alemán",
+  "hero.title": "Crea tu sitio web de sueños hoy",
+  "hero.description": "Ofrecemos una amplia gama de servicios para ayudarte a crear tu sitio web de sueños. Desde el diseño hasta el desarrollo, te tenemos cubierto.",
+  "hero.list.item1": "Diseño profesional",
+  "hero.list.item2": "Desarrollo rápido",
+  "hero.list.item3": "Precios accesibles",
+  "hero.button.buy": "Comprar ahora",
+  "hero.button.view": "Ver planes"
 }

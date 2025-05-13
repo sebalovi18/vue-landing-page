@@ -18,7 +18,7 @@ const { t } = useI18n()
         class="size-5 stroke-white"
       />
       <span
-        class="text-white"
+        class="text-white text-lg"
       >
         {{ t('header.title') }}
       </span>
