@@ -94,27 +94,27 @@ const getPlanFeatures = (id: string): Array<{
   return [
     {
       description: t('pricing.shared.features.1.description'),
-      icon: isEssential ? CheckCircle : XCircle,
+      icon: CheckCircle,
       iconColor: isEssential ? greenColor : redColor
     },
     {
       description: t('pricing.shared.features.2.description'),
-      icon: isEssential ? CheckCircle : XCircle,
+      icon: CheckCircle,
       iconColor: isEssential ? greenColor : redColor
     },
     {
       description: t('pricing.shared.features.3.description'),
-      icon: isEssential ? CheckCircle : XCircle,
+      icon: CheckCircle,
       iconColor: isEssential ? greenColor : redColor
     },
     {
       description: t('pricing.shared.features.4.description'),
-      icon: isEssential ? CheckCircle : XCircle,
+      icon: CheckCircle,
       iconColor: isEssential ? greenColor : redColor
     },
     {
       description: t('pricing.shared.features.5.description'),
-      icon: isEssential ? CheckCircle : XCircle,
+      icon: CheckCircle,
       iconColor: isEssential ? greenColor : redColor
     },
     {
@@ -157,6 +157,7 @@ const getPlanFeatures = (id: string): Array<{
         <div
           class="shadow-md w-[300px]"
         >
+          <!-- Popular Plan -->
           <div
             v-if="plan.id === 'advanced_solo'"
             class="w-full text-lg font-light text-center text-white bg-blue-900 rounded-t-lg py-2"
@@ -233,6 +234,7 @@ const getPlanFeatures = (id: string): Array<{
         </div>
       </div>
     </div>
+    <!-- Guarantee -->
     <div
       class="text-center"
     >
