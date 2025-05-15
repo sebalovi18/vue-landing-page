@@ -47,5 +47,12 @@
   "pricing.shared.features.6.description": "Constructor de popups",
   "pricing.shared.features.7.description": "Código personalizado y CSS",
   "pricing.shared.features.8.description": "Características de comercio electrónico",
-  "pricing.shared.features.9.description": "Notas colaborativas"
+  "pricing.shared.features.9.description": "Notas colaborativas",
+  "testimonials.title": "Lo que dicen de nosotros",
+  "support.title": "Soporte Premium",
+  "support.description": "Con nuestro soporte premium, puedes contactarnos 24/7 y obtener respuestas de expertos ubicados en todo el mundo.",
+  "support.features.1": "Soporte de chat premium",
+  "support.features.2": "Soporte rápido y eficiente",
+  "support.features.3": "Soporte 24/7/365 de expertos",
+  "support.features.4": "5 reseñas de 5 estrellas"
 }

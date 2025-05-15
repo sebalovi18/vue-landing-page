@@ -47,5 +47,12 @@
   "pricing.shared.features.6.description": "Popup-Builder",
   "pricing.shared.features.7.description": "Eigener Code & CSS",
   "pricing.shared.features.8.description": "E-Commerce Funktionen",
-  "pricing.shared.features.9.description": "Kollaborative Notizen"
+  "pricing.shared.features.9.description": "Kollaborative Notizen",
+  "testimonials.title": "Was die Leute sagen",
+  "support.title": "Premium Support",
+  "support.description": "Mit unserem Premium Support können Sie uns 24/7 kontaktieren und von Experten aus aller Welt beantwortet werden.",
+  "support.features.1": "Live-Chat-Premium-Support",
+  "support.features.2": "Schnell und effizienter Support",
+  "support.features.3": "24/7/365 Experten-Support",
+  "support.features.4": "5 Sterne-Bewertungen"
 }

@@ -4,6 +4,7 @@ import Hero from '@/sections/home/Hero.vue'
 import Stats from '@/sections/home/Stats.vue'
 import Pricing from '@/sections/home/Pricing.vue'
 import Testimonials from '@/sections/home/Testimonials.vue'
+import Support from '@/sections/home/Support.vue'
 </script>
 
 <template>
@@ -15,5 +16,6 @@ import Testimonials from '@/sections/home/Testimonials.vue'
     <Stats />
     <Pricing />
     <Testimonials />
+    <Support />
   </div>
 </template>

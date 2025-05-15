@@ -6,7 +6,17 @@ const { t } = useI18n()
 
 const scrollToPricing = () => {
   const pricingSection = document.getElementById('pricing')
-  pricingSection?.scrollIntoView({ behavior: 'smooth' })
+  const header = document.getElementById('header')
+
+  if (!pricingSection || !header) return
+
+  const { top } = pricingSection.getBoundingClientRect()
+  const { height } = header.getBoundingClientRect()
+
+  window.scrollTo({
+    top: top - height,
+    behavior: 'smooth'
+  })
 }
 
 </script>

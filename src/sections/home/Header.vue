@@ -9,6 +9,7 @@ const { t } = useI18n()
 
 <template>
   <div
+    id="header"
     class="sticky top-0 z-10 flex items-center justify-between p-4 bg-blue-900"
   >
     <div
