@@ -3,6 +3,7 @@ import Header from '@/sections/home/Header.vue'
 import Hero from '@/sections/home/Hero.vue'
 import Stats from '@/sections/home/Stats.vue'
 import Pricing from '@/sections/home/Pricing.vue'
+import Testimonials from '@/sections/home/Testimonials.vue'
 </script>
 
 <template>
@@ -13,5 +14,6 @@ import Pricing from '@/sections/home/Pricing.vue'
     <Hero />
     <Stats />
     <Pricing />
+    <Testimonials />
   </div>
 </template>

@@ -46,7 +46,7 @@ const isLanguageSelectorHovered = ref(false)
           class="pt-1"
         >
           <button
-            class="base-button bg-white hover:bg-gray-100 text-gray-500"
+            class="base-button bg-white hover:bg-gray-50 text-gray-500"
             @click="locale = language.code"
           >
             <img

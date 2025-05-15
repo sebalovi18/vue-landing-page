@@ -72,7 +72,7 @@ const scrollToPricing = () => {
         class="flex items-center gap-2"
       >
         <button
-          class="base-button bg-white hover:bg-gray-100 text-blue-900 text-xs"
+          class="base-button bg-white hover:bg-gray-50 text-blue-900 text-xs"
         >
           {{ t('hero.button.buy') }}
         </button>
