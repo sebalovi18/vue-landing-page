@@ -14,10 +14,10 @@ const features = computed((): Array<string> => [
 </script>
 <template>
   <div
-    class="bg-blue-900 text-white py-20 px-4 flex items-center justify-evenly"
+    class="bg-blue-900 text-white py-20 flex-wrap lg:flex-nowrap space-y-8 lg:space-y-0 space-x-0 lg:space-x-12 px-4 flex items-center justify-center"
   >
     <div
-      class="space-y-4"
+      class="w-auto max-w-[600px] space-y-4"
     >
       <h1
         class="text-4xl font-bold"
@@ -25,7 +25,7 @@ const features = computed((): Array<string> => [
         {{ t('support.title') }}
       </h1>
       <p
-        class="text-lg w-md"
+        class="text-lg"
       >
         {{ t('support.description') }}
       </p>
@@ -48,11 +48,12 @@ const features = computed((): Array<string> => [
         </div>
       </div>
     </div>
-    <div>
+    <div
+      class="w-auto max-w-[600px]"
+    >
       <img
         src="/public/image-test.webp"
         alt="Support"
-        class="max-w-xl"
       >
     </div>
   </div>
