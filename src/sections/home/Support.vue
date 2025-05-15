@@ -12,6 +12,7 @@ const features = computed((): Array<string> => [
   t('support.features.4')
 ])
 </script>
+
 <template>
   <div
     class="bg-blue-900 text-white py-20 flex-wrap lg:flex-nowrap space-y-8 lg:space-y-0 space-x-0 lg:space-x-12 px-4 flex items-center justify-center"

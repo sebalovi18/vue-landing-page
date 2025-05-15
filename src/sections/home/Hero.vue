@@ -22,10 +22,10 @@ const scrollToPricing = () => {
 </script>
 <template>
   <div
-    class="bg-blue-900 text-white grid grid-cols-1 gap-4 lg:grid-cols-2 items-center"
+    class="bg-blue-900 text-white flex px-4 flex-wrap lg:flex-nowrap justify-center items-center space-y-8 lg:space-y-0 space-x-0 lg:space-x-12"
   >
     <div
-      class="space-y-4 px-4"
+      class="shrink max-w-[600px] space-y-4"
     >
       <!-- Hero title and description -->
       <div>
@@ -35,7 +35,7 @@ const scrollToPricing = () => {
           {{ t('hero.title') }}
         </h1>
         <p
-          class="text-lg w-auto md:w-lg font-thin"
+          class="text-lg font-thin"
         >
           {{ t('hero.description') }}
         </p>
@@ -95,10 +95,10 @@ const scrollToPricing = () => {
       </div>
     </div>
     <div
-      class="px-4"
+      class="shrink w-full max-w-[600px]"
     >
       <iframe
-        class="w-full h-[360px] lg:h-[576px]"
+        class="w-full h-[400px] "
         src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=Qy1vqtm-OjM5chcM"
         title="YouTube video player"
         frameborder="0"
