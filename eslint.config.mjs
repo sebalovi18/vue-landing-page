@@ -5,6 +5,7 @@ import path from 'node:path'
 import stylistic from '@stylistic/eslint-plugin'
 import ts from 'typescript-eslint'
 import vue from 'eslint-plugin-vue'
+import globals from 'globals'
 
 // The next is necessary to ignore the same files as gitignore
 const __filename = fileURLToPath(import.meta.url)
@@ -16,25 +17,28 @@ export default ts.config(
   ...ts.configs.recommended,
   ...vue.configs['flat/recommended'],
   {
-    files: ['*.vue', '**/*.vue'],
+    name: 'generic-project-configuration',
+    files: ['./src/**/*.{vue,ts}'],
     languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
       parserOptions: {
         parser: '@typescript-eslint/parser'
       },
       globals: {
-        document: 'readonly',
-        window: 'readonly'
+        ...globals.browser,
+        ...globals.node
       }
     }
   },
   {
+    name: 'generic-project-rules',
     extends: [
       includeIgnoreFile(gitignorePath)
     ],
     ignores: [
       'src/components/icons/**'
     ],
-    name: 'generic-project-config',
     plugins: {
       '@stylistic': stylistic
     },
